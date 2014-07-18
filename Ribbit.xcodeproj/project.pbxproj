@@ -19,7 +19,6 @@
 		26BAEB801976051B0065B33F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26BAEB681976051A0065B33F /* UIKit.framework */; };
 		26BAEB881976051B0065B33F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 26BAEB861976051B0065B33F /* InfoPlist.strings */; };
 		26BAEB8A1976051B0065B33F /* RibbitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BAEB891976051B0065B33F /* RibbitTests.m */; };
-		26BAEB94197605450065B33F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26BAEB93197605450065B33F /* MainStoryboard.storyboard */; };
 		26BAEB9B19760BAD0065B33F /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 26BAEB9519760BAD0065B33F /* camera.png */; };
 		26BAEB9C19760BAD0065B33F /* camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26BAEB9619760BAD0065B33F /* camera@2x.png */; };
 		26BAEB9D19760BAD0065B33F /* friends.png in Resources */ = {isa = PBXBuildFile; fileRef = 26BAEB9719760BAD0065B33F /* friends.png */; };
@@ -39,6 +38,10 @@
 		26BAEBF91976488C0065B33F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26BAEBF21976488C0065B33F /* SystemConfiguration.framework */; };
 		26BAEBFC19764E100065B33F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BAEBFB19764E100065B33F /* LoginViewController.m */; };
 		26BAEBFF19764E220065B33F /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BAEBFE19764E220065B33F /* SignupViewController.m */; };
+		26BAEC6019789B320065B33F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26BAEC5F19789B320065B33F /* MainStoryboard.storyboard */; };
+		26BAEC631978A1520065B33F /* Shopping Cart.png in Resources */ = {isa = PBXBuildFile; fileRef = 26BAEC611978A1520065B33F /* Shopping Cart.png */; };
+		26BAEC641978A1520065B33F /* Shopping Cart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26BAEC621978A1520065B33F /* Shopping Cart@2x.png */; };
+		26BAEC671978A1DF0065B33F /* ShopTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BAEC661978A1DF0065B33F /* ShopTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +71,6 @@
 		26BAEB851976051B0065B33F /* RibbitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RibbitTests-Info.plist"; sourceTree = "<group>"; };
 		26BAEB871976051B0065B33F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		26BAEB891976051B0065B33F /* RibbitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RibbitTests.m; sourceTree = "<group>"; };
-		26BAEB93197605450065B33F /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		26BAEB9519760BAD0065B33F /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera.png; path = ../camera.png; sourceTree = "<group>"; };
 		26BAEB9619760BAD0065B33F /* camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera@2x.png"; path = "../camera@2x.png"; sourceTree = "<group>"; };
 		26BAEB9719760BAD0065B33F /* friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = friends.png; path = ../friends.png; sourceTree = "<group>"; };
@@ -91,6 +93,11 @@
 		26BAEBFB19764E100065B33F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ../LoginViewController.m; sourceTree = "<group>"; };
 		26BAEBFD19764E220065B33F /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignupViewController.h; path = ../SignupViewController.h; sourceTree = "<group>"; };
 		26BAEBFE19764E220065B33F /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignupViewController.m; path = ../SignupViewController.m; sourceTree = "<group>"; };
+		26BAEC5F19789B320065B33F /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		26BAEC611978A1520065B33F /* Shopping Cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shopping Cart.png"; sourceTree = "<group>"; };
+		26BAEC621978A1520065B33F /* Shopping Cart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shopping Cart@2x.png"; sourceTree = "<group>"; };
+		26BAEC651978A1DF0065B33F /* ShopTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopTableViewController.h; sourceTree = "<group>"; };
+		26BAEC661978A1DF0065B33F /* ShopTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +137,7 @@
 		26BAEB581976051A0065B33F = {
 			isa = PBXGroup;
 			children = (
-				26BAEB93197605450065B33F /* MainStoryboard.storyboard */,
+				26BAEC5F19789B320065B33F /* MainStoryboard.storyboard */,
 				26BAEB6A1976051A0065B33F /* Ribbit */,
 				26BAEB831976051B0065B33F /* RibbitTests */,
 				26BAEB631976051A0065B33F /* Frameworks */,
@@ -179,6 +186,8 @@
 				26BAEBFB19764E100065B33F /* LoginViewController.m */,
 				26BAEBFD19764E220065B33F /* SignupViewController.h */,
 				26BAEBFE19764E220065B33F /* SignupViewController.m */,
+				26BAEC651978A1DF0065B33F /* ShopTableViewController.h */,
+				26BAEC661978A1DF0065B33F /* ShopTableViewController.m */,
 				26BAEBA119760BF60065B33F /* Images */,
 				26BAEB761976051A0065B33F /* Images.xcassets */,
 				26BAEB6B1976051A0065B33F /* Supporting Files */,
@@ -219,6 +228,8 @@
 			isa = PBXGroup;
 			children = (
 				26BAEB9519760BAD0065B33F /* camera.png */,
+				26BAEC611978A1520065B33F /* Shopping Cart.png */,
+				26BAEC621978A1520065B33F /* Shopping Cart@2x.png */,
 				26BAEB9619760BAD0065B33F /* camera@2x.png */,
 				26BAEB9719760BAD0065B33F /* friends.png */,
 				26BAEB9819760BAD0065B33F /* friends@2x.png */,
@@ -304,14 +315,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26BAEB94197605450065B33F /* MainStoryboard.storyboard in Resources */,
 				26BAEB9D19760BAD0065B33F /* friends.png in Resources */,
+				26BAEC6019789B320065B33F /* MainStoryboard.storyboard in Resources */,
+				26BAEC631978A1520065B33F /* Shopping Cart.png in Resources */,
 				26BAEB9E19760BAD0065B33F /* friends@2x.png in Resources */,
 				26BAEB9C19760BAD0065B33F /* camera@2x.png in Resources */,
 				26BAEB9F19760BAD0065B33F /* inbox.png in Resources */,
 				26BAEB6F1976051A0065B33F /* InfoPlist.strings in Resources */,
 				26BAEB9B19760BAD0065B33F /* camera.png in Resources */,
 				26BAEB771976051A0065B33F /* Images.xcassets in Resources */,
+				26BAEC641978A1520065B33F /* Shopping Cart@2x.png in Resources */,
 				26BAEBA019760BAD0065B33F /* inbox@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +347,7 @@
 				26BAEBFC19764E100065B33F /* LoginViewController.m in Sources */,
 				26BAEBA4197634590065B33F /* InboxViewControllerTableViewController.m in Sources */,
 				26BAEB711976051A0065B33F /* main.m in Sources */,
+				26BAEC671978A1DF0065B33F /* ShopTableViewController.m in Sources */,
 				26BAEB751976051A0065B33F /* RAAppDelegate.m in Sources */,
 				26BAEBFF19764E220065B33F /* SignupViewController.m in Sources */,
 			);
@@ -542,6 +556,7 @@
 				26BAEB8F1976051B0065B33F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		26BAEB901976051B0065B33F /* Build configuration list for PBXNativeTarget "RibbitTests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +565,7 @@
 				26BAEB921976051B0065B33F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
