@@ -21,7 +21,7 @@
     
     PFUser *currentUser = [PFUser currentUser];
     if(currentUser){
-        NSLog(@"Current user: %@",currentUser.username);
+        //NSLog(@"Current user: %@",currentUser.username);
     }else{
         [self performSegueWithIdentifier:@"showLogin" sender:self];
     }

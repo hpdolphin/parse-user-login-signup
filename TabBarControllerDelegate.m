@@ -14,6 +14,9 @@
     NSUInteger index = [tabBarController.viewControllers indexOfObject:viewController];
     //NSLog(@"Select tab %d",index);
     //if shop tab is selected, fetch data from Parse to prepare the datasource for the ShopTableViewController
+    if (index == 3) {
+        //Shop tab tapped
+    }
 }
 
 @end
