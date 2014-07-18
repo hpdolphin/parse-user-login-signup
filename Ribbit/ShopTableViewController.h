@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
+//@interface ShopTableViewController : PFQueryTableViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 @interface ShopTableViewController : UITableViewController
+
+-(id)initWithStyle:(UITableViewStyle)style;
 
 @end

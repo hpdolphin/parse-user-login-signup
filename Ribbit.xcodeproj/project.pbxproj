@@ -43,6 +43,7 @@
 		26BAEC641978A1520065B33F /* Shopping Cart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26BAEC621978A1520065B33F /* Shopping Cart@2x.png */; };
 		26BAEC671978A1DF0065B33F /* ShopTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BAEC661978A1DF0065B33F /* ShopTableViewController.m */; };
 		26BAEC6E1978A7500065B33F /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 26BAEC6D1978A7500065B33F /* Development.xcconfig */; };
+		26BAEC721978EEC60065B33F /* ShopTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BAEC711978EEC60065B33F /* ShopTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,8 @@
 		26BAEC661978A1DF0065B33F /* ShopTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopTableViewController.m; sourceTree = "<group>"; };
 		26BAEC6D1978A7500065B33F /* Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		26BAEC6F1978A7630065B33F /* Distribution.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Distribution.xcconfig; sourceTree = "<group>"; };
+		26BAEC701978EEC60065B33F /* ShopTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopTableViewCell.h; sourceTree = "<group>"; };
+		26BAEC711978EEC60065B33F /* ShopTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +196,8 @@
 				26BAEBFE19764E220065B33F /* SignupViewController.m */,
 				26BAEC651978A1DF0065B33F /* ShopTableViewController.h */,
 				26BAEC661978A1DF0065B33F /* ShopTableViewController.m */,
+				26BAEC701978EEC60065B33F /* ShopTableViewCell.h */,
+				26BAEC711978EEC60065B33F /* ShopTableViewCell.m */,
 				26BAEBA119760BF60065B33F /* Images */,
 				26BAEB761976051A0065B33F /* Images.xcassets */,
 				26BAEB6B1976051A0065B33F /* Supporting Files */,
@@ -353,6 +358,7 @@
 				26BAEBFC19764E100065B33F /* LoginViewController.m in Sources */,
 				26BAEBA4197634590065B33F /* InboxViewControllerTableViewController.m in Sources */,
 				26BAEB711976051A0065B33F /* main.m in Sources */,
+				26BAEC721978EEC60065B33F /* ShopTableViewCell.m in Sources */,
 				26BAEC671978A1DF0065B33F /* ShopTableViewController.m in Sources */,
 				26BAEB751976051A0065B33F /* RAAppDelegate.m in Sources */,
 				26BAEBFF19764E220065B33F /* SignupViewController.m in Sources */,
