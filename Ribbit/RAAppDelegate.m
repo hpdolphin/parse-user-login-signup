@@ -8,18 +8,26 @@
 
 #import "RAAppDelegate.h"
 #import <Parse/Parse.h>
+#import "TabBarControllerDelegate.h"
 
 @implementation RAAppDelegate
+
+@synthesize tabBarControllerDelegate;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
     [Parse setApplicationId:infoDictionary[@"PARSE_APPLICATION_ID"]
                   clientKey:infoDictionary[@"PARSE_CLIENT_KEY"]];
-    NSLog(@"Parse App ID:%@",infoDictionary[@"PARSE_APPLICATION_ID"]);
+    //NSLog(@"Parse App ID:%@",infoDictionary[@"PARSE_APPLICATION_ID"]);
     
     //[Parse setApplicationId:@"fXzhkOaiiU5eVbVJNBGsCSvnezXfXlnfHxNuvFaG"
     //              clientKey:@"QR8C3mJi7la2hVWW6OuVEtIljuZWGQw0l5wrAU21"];
+    
+    //hook the tab bar delegate
+    tabBarControllerDelegate = [[TabBarControllerDelegate alloc] init];
+    UITabBarController *rootController = (UITabBarController*)self.window.rootViewController;
+    rootController.delegate = tabBarControllerDelegate;
     
     return YES;
 }

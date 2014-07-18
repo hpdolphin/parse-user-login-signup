@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class  TabBarControllerDelegate;
+
 @interface RAAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) TabBarControllerDelegate *tabBarControllerDelegate;
 
 @end
