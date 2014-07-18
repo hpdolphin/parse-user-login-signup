@@ -42,6 +42,7 @@
 		26BAEC631978A1520065B33F /* Shopping Cart.png in Resources */ = {isa = PBXBuildFile; fileRef = 26BAEC611978A1520065B33F /* Shopping Cart.png */; };
 		26BAEC641978A1520065B33F /* Shopping Cart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26BAEC621978A1520065B33F /* Shopping Cart@2x.png */; };
 		26BAEC671978A1DF0065B33F /* ShopTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BAEC661978A1DF0065B33F /* ShopTableViewController.m */; };
+		26BAEC6E1978A7500065B33F /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 26BAEC6D1978A7500065B33F /* Development.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,8 @@
 		26BAEC621978A1520065B33F /* Shopping Cart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shopping Cart@2x.png"; sourceTree = "<group>"; };
 		26BAEC651978A1DF0065B33F /* ShopTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopTableViewController.h; sourceTree = "<group>"; };
 		26BAEC661978A1DF0065B33F /* ShopTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopTableViewController.m; sourceTree = "<group>"; };
+		26BAEC6D1978A7500065B33F /* Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		26BAEC6F1978A7630065B33F /* Distribution.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Distribution.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +140,8 @@
 		26BAEB581976051A0065B33F = {
 			isa = PBXGroup;
 			children = (
+				26BAEC6D1978A7500065B33F /* Development.xcconfig */,
+				26BAEC6F1978A7630065B33F /* Distribution.xcconfig */,
 				26BAEC5F19789B320065B33F /* MainStoryboard.storyboard */,
 				26BAEB6A1976051A0065B33F /* Ribbit */,
 				26BAEB831976051B0065B33F /* RibbitTests */,
@@ -324,6 +329,7 @@
 				26BAEB6F1976051A0065B33F /* InfoPlist.strings in Resources */,
 				26BAEB9B19760BAD0065B33F /* camera.png in Resources */,
 				26BAEB771976051A0065B33F /* Images.xcassets in Resources */,
+				26BAEC6E1978A7500065B33F /* Development.xcconfig in Resources */,
 				26BAEC641978A1520065B33F /* Shopping Cart@2x.png in Resources */,
 				26BAEBA019760BAD0065B33F /* inbox@2x.png in Resources */,
 			);
@@ -393,6 +399,7 @@
 /* Begin XCBuildConfiguration section */
 		26BAEB8B1976051B0065B33F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26BAEC6D1978A7500065B33F /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -431,6 +438,7 @@
 		};
 		26BAEB8C1976051B0065B33F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26BAEC6F1978A7630065B33F /* Distribution.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";

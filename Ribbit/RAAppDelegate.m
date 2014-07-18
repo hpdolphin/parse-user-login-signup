@@ -13,13 +13,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    /*self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];*/
+    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+    [Parse setApplicationId:infoDictionary[@"PARSE_APPLICATION_ID"]
+                  clientKey:infoDictionary[@"PARSE_CLIENT_KEY"]];
+    NSLog(@"Parse App ID:%@",infoDictionary[@"PARSE_APPLICATION_ID"]);
     
-    [Parse setApplicationId:@"fXzhkOaiiU5eVbVJNBGsCSvnezXfXlnfHxNuvFaG"
-                  clientKey:@"QR8C3mJi7la2hVWW6OuVEtIljuZWGQw0l5wrAU21"];
+    //[Parse setApplicationId:@"fXzhkOaiiU5eVbVJNBGsCSvnezXfXlnfHxNuvFaG"
+    //              clientKey:@"QR8C3mJi7la2hVWW6OuVEtIljuZWGQw0l5wrAU21"];
     
     return YES;
 }

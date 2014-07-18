@@ -1,0 +1,10 @@
+//
+//  Development.xcconfig
+//  Ribbit
+//
+//  Created by Lailei Huang on 18/07/2014.
+//  Copyright (c) 2014 alex.huang. All rights reserved.
+//
+
+PARSE_APPLICATION_ID = fXzhkOaiiU5eVbVJNBGsCSvnezXfXlnfHxNuvFaG
+PARSE_CLIENT_KEY = QR8C3mJi7la2hVWW6OuVEtIljuZWGQw0l5wrAU21
