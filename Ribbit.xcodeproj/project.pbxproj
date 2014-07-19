@@ -45,6 +45,8 @@
 		26BAEC6E1978A7500065B33F /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 26BAEC6D1978A7500065B33F /* Development.xcconfig */; };
 		26BAEC721978EEC60065B33F /* ShopTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BAEC711978EEC60065B33F /* ShopTableViewCell.m */; };
 		26BAEC7B19790B230065B33F /* TabBarControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BAEC7A19790B230065B33F /* TabBarControllerDelegate.m */; };
+		26BAEC7E1979E3420065B33F /* ProductItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BAEC7D1979E3420065B33F /* ProductItemStore.m */; };
+		26BAEC831979E7610065B33F /* ProductItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BAEC821979E7610065B33F /* ProductItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +109,10 @@
 		26BAEC711978EEC60065B33F /* ShopTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopTableViewCell.m; sourceTree = "<group>"; };
 		26BAEC7919790B230065B33F /* TabBarControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabBarControllerDelegate.h; path = ../TabBarControllerDelegate.h; sourceTree = "<group>"; };
 		26BAEC7A19790B230065B33F /* TabBarControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabBarControllerDelegate.m; path = ../TabBarControllerDelegate.m; sourceTree = "<group>"; };
+		26BAEC7C1979E3420065B33F /* ProductItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductItemStore.h; sourceTree = "<group>"; };
+		26BAEC7D1979E3420065B33F /* ProductItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductItemStore.m; sourceTree = "<group>"; };
+		26BAEC811979E7610065B33F /* ProductItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductItem.h; sourceTree = "<group>"; };
+		26BAEC821979E7610065B33F /* ProductItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,18 +197,9 @@
 			children = (
 				26BAEB731976051A0065B33F /* RAAppDelegate.h */,
 				26BAEB741976051A0065B33F /* RAAppDelegate.m */,
-				26BAEC7919790B230065B33F /* TabBarControllerDelegate.h */,
-				26BAEC7A19790B230065B33F /* TabBarControllerDelegate.m */,
-				26BAEBA2197634590065B33F /* InboxViewControllerTableViewController.h */,
-				26BAEBA3197634590065B33F /* InboxViewControllerTableViewController.m */,
-				26BAEBFA19764E100065B33F /* LoginViewController.h */,
-				26BAEBFB19764E100065B33F /* LoginViewController.m */,
-				26BAEBFD19764E220065B33F /* SignupViewController.h */,
-				26BAEBFE19764E220065B33F /* SignupViewController.m */,
-				26BAEC651978A1DF0065B33F /* ShopTableViewController.h */,
-				26BAEC661978A1DF0065B33F /* ShopTableViewController.m */,
-				26BAEC701978EEC60065B33F /* ShopTableViewCell.h */,
-				26BAEC711978EEC60065B33F /* ShopTableViewCell.m */,
+				26BAEC801979E7140065B33F /* contorller */,
+				26BAEC84197A21E30065B33F /* delegate */,
+				26BAEC7F1979E7030065B33F /* model */,
 				26BAEBA119760BF60065B33F /* Images */,
 				26BAEB761976051A0065B33F /* Images.xcassets */,
 				26BAEB6B1976051A0065B33F /* Supporting Files */,
@@ -252,6 +249,43 @@
 				26BAEB9A19760BAD0065B33F /* inbox@2x.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		26BAEC7F1979E7030065B33F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				26BAEC7C1979E3420065B33F /* ProductItemStore.h */,
+				26BAEC7D1979E3420065B33F /* ProductItemStore.m */,
+				26BAEC811979E7610065B33F /* ProductItem.h */,
+				26BAEC821979E7610065B33F /* ProductItem.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		26BAEC801979E7140065B33F /* contorller */ = {
+			isa = PBXGroup;
+			children = (
+				26BAEBA2197634590065B33F /* InboxViewControllerTableViewController.h */,
+				26BAEBA3197634590065B33F /* InboxViewControllerTableViewController.m */,
+				26BAEBFA19764E100065B33F /* LoginViewController.h */,
+				26BAEBFB19764E100065B33F /* LoginViewController.m */,
+				26BAEBFD19764E220065B33F /* SignupViewController.h */,
+				26BAEBFE19764E220065B33F /* SignupViewController.m */,
+				26BAEC651978A1DF0065B33F /* ShopTableViewController.h */,
+				26BAEC661978A1DF0065B33F /* ShopTableViewController.m */,
+				26BAEC701978EEC60065B33F /* ShopTableViewCell.h */,
+				26BAEC711978EEC60065B33F /* ShopTableViewCell.m */,
+			);
+			name = contorller;
+			sourceTree = "<group>";
+		};
+		26BAEC84197A21E30065B33F /* delegate */ = {
+			isa = PBXGroup;
+			children = (
+				26BAEC7919790B230065B33F /* TabBarControllerDelegate.h */,
+				26BAEC7A19790B230065B33F /* TabBarControllerDelegate.m */,
+			);
+			name = delegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,7 +396,9 @@
 			files = (
 				26BAEC7B19790B230065B33F /* TabBarControllerDelegate.m in Sources */,
 				26BAEBFC19764E100065B33F /* LoginViewController.m in Sources */,
+				26BAEC7E1979E3420065B33F /* ProductItemStore.m in Sources */,
 				26BAEBA4197634590065B33F /* InboxViewControllerTableViewController.m in Sources */,
+				26BAEC831979E7610065B33F /* ProductItem.m in Sources */,
 				26BAEB711976051A0065B33F /* main.m in Sources */,
 				26BAEC721978EEC60065B33F /* ShopTableViewCell.m in Sources */,
 				26BAEC671978A1DF0065B33F /* ShopTableViewController.m in Sources */,

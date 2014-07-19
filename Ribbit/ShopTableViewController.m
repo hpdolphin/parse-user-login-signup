@@ -7,6 +7,7 @@
 //
 
 #import "ShopTableViewController.h"
+#import "ProductItemStore.h"
 
 @interface ShopTableViewController ()
 
@@ -35,7 +36,8 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-    
+    ProductItemStore *productStore = [ProductItemStore sharedStore];
+    NSLog(@"%d data unit(s) loaded",[productStore count]);
 }
 
 - (void)didReceiveMemoryWarning
