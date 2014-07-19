@@ -7,13 +7,24 @@
 //
 
 #import "ShopTableViewController.h"
+#import "ShopTableViewCell.h"
 #import "ProductItemStore.h"
+#import "ProductItem.h"
+
 
 @interface ShopTableViewController ()
 
 @end
 
 @implementation ShopTableViewController
+
+@synthesize loadIndicator;
+
+- (id)init{
+    self = [super init];
+    loadIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    return self;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -27,6 +38,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [loadIndicator startAnimating];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -36,8 +48,10 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-    ProductItemStore *productStore = [ProductItemStore sharedStore];
-    NSLog(@"%d data unit(s) loaded",[productStore count]);
+    //ProductItemStore *productStore = [ProductItemStore sharedStore];
+    //NSLog(@"%d data unit(s) loaded",[productStore count]);
+    //reload the table, due the possibility product is loading
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,78 +62,38 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    ProductItemStore *productStore = [ProductItemStore sharedStore];
+    return [productStore count];
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+- (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+     ShopTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ProductItemCell"];
+    //Obtain one productItem from the store
+    ProductItemStore *productStore = [ProductItemStore sharedStore];
+    //NSLog(@"Total %d items",[productStore count]);
+    if ([productStore count]!= 0) {
+        //Construct one cell from the productItem
+        ProductItem *oneItem = [productStore.allItems objectAtIndex:indexPath.row];
+        
+        //NSLog(@"Try construct a cell for:%@",oneItem.title);
+        
+        cell.productTitleField.text = oneItem.title;
+        cell.productPriceField.text = [NSString stringWithFormat:@"$ %@",oneItem.price];
+        //get the image from Parse
+        //cell.productImageField.image = [UIImage imageNamed:@"camera.png"];
+        cell.productImageField.image = [UIImage imageWithData:oneItem.imageData];
+        //NSLog(@"Image Data for %@ is %@.",oneItem.title,oneItem.imageData);
+    }
     
-    // Configure the cell...
-    
+    //return the cell to the table view
     return cell;
 }
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

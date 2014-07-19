@@ -10,13 +10,13 @@
 
 @implementation ProductItem
 
-@synthesize title,price,imageFile;
+@synthesize title,price,imageData;
 
--(instancetype)initWithTitle:(NSString *)tit price:(NSNumber *)pri andImageFile:(PFFile *)img{
+-(instancetype)initWithTitle:(NSString *)tit price:(NSNumber *)pri andImageFile:(NSData *)img{
     self = [super init];
     title = tit;
     price = pri;
-    imageFile = img;
+    imageData = img;
     return self;
 }
 

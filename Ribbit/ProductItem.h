@@ -13,8 +13,8 @@
 
 @property (nonatomic,strong) NSString *title;
 @property (nonatomic,strong) NSNumber *price;
-@property (nonatomic,strong) PFFile *imageFile;
+@property (nonatomic,strong) NSData *imageData;
 
--(instancetype)initWithTitle:(NSString *)tit price:(NSNumber *)pri andImageFile:(PFFile *)img;
+-(instancetype)initWithTitle:(NSString *)tit price:(NSNumber *)pri andImageFile:(NSData *)img;
 
 @end

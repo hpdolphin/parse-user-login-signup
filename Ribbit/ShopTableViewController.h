@@ -10,7 +10,8 @@
 #import <Parse/Parse.h>
 
 //@interface ShopTableViewController : PFQueryTableViewController <UIPickerViewDataSource, UIPickerViewDelegate>
-@interface ShopTableViewController : UITableViewController
+@interface ShopTableViewController : UITableViewController <UITableViewDataSource>
+@property (retain, nonatomic) IBOutlet UIActivityIndicatorView *loadIndicator;
 
 -(id)initWithStyle:(UITableViewStyle)style;
 
