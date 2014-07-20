@@ -21,6 +21,7 @@
 @implementation ProductItemStore
 
 @synthesize allItems;
+@synthesize loadingDelegate;
 
 +(instancetype)sharedStore{
     static ProductItemStore *sharedStore = nil;
@@ -64,6 +65,7 @@
         if (!error) {
             //NSLog(@"Find %d items in total.",[objects count]);
             //The find succeeded
+            __block int loadedItemIndex = 0;
             for (PFObject *object in objects) {
                 
                 NSString *title = object[@"description"];
@@ -80,7 +82,22 @@
                         [oneItem setImageData:data];
                         //all attributes settled
                         [self.privateItems addObject:oneItem];
+                        
+                        //finish loading image,send an event
+                        if (loadingDelegate && [loadingDelegate respondsToSelector:@selector(itemLoadingFinished:)]) {
+                            [loadingDelegate itemLoadingFinished:title];
+                        }
+                        
                         NSLog(@"add %@",[oneItem title]);
+                        
+                        //Already the last item, emit an event to inform the delgate about it
+                        loadedItemIndex = loadedItemIndex + 1;
+                        if (loadedItemIndex == [objects count]) {
+                            if (loadingDelegate && [loadingDelegate respondsToSelector:@selector(allItemsLoadingFinished)]) {
+                                [loadingDelegate allItemsLoadingFinished];
+                            }
+                        }
+                        
                     }else{
                         @throw [NSException exceptionWithName:@"Load Data"
                                                        reason:[NSString stringWithFormat:@"Can't load %@ data from Parse",oneItem.title]
@@ -88,20 +105,17 @@
                         NSLog(@"Can't add %@",[oneItem title]);
                     }
                 } progressBlock:^(int percentDone) {
-                    NSLog(@"load %@'s image, %d percent done.",title,percentDone);
+                    //NSLog(@"load %@'s image, %d percent done.",title,percentDone);
+                    /*if (loadingDelegate && [loadingDelegate respondsToSelector:@selector(itemLoadingFinished:)]) {
+                        [loadingDelegate itemLoadingFinished:title];
+                    }*/
                 }];
                 
                 /*//get file syncronizly
                 [oneItem setImageData:[imageFile getData]];
                 [self.privateItems addObject:oneItem];*/
                 
-                //[self.privateItems addObject:oneItem];
-                
-                //NSLog(@"Title:%@, Price:%@, Image:%@",title,price,imageData);
-            }
-            
-            //load finish
-            
+            }//end if
         }else{
             @throw [NSException exceptionWithName:@"Load Data" reason:@"Can't load product item data from Parse" userInfo:nil];
         }

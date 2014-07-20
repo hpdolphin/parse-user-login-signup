@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ProductItemStoreDelegate.h"
 
 @interface ProductItemStore : NSObject
 
 @property (nonatomic,readonly) NSArray *allItems;
+@property (nonatomic, weak) id<ProductItemStoreDelegate> loadingDelegate;
 
 +(instancetype)sharedStore;
 

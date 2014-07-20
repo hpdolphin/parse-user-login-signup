@@ -40,6 +40,9 @@
     [super viewDidLoad];
     [loadIndicator startAnimating];
     
+    ProductItemStore *productStore = [ProductItemStore sharedStore];
+    productStore.loadingDelegate = self;
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -94,6 +97,20 @@
     
     //return the cell to the table view
     return cell;
+}
+
+#pragma mark - Datasource delegate methods
+-(void)itemLoadingFinished:(NSString *)itemTitle{
+    NSLog(@"%@ finished loading.",itemTitle);
+    [self.loadIndicator stopAnimating];
+    [self.tableView reloadData];
+    [self.loadIndicator startAnimating];
+}
+
+-(void)allItemsLoadingFinished{
+    NSLog(@"All items finish loading.");
+    [self.loadIndicator stopAnimating];
+    [self.tableView reloadData];
 }
 
 @end

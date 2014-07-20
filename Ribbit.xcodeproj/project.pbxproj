@@ -113,6 +113,7 @@
 		26BAEC7D1979E3420065B33F /* ProductItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductItemStore.m; sourceTree = "<group>"; };
 		26BAEC811979E7610065B33F /* ProductItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductItem.h; sourceTree = "<group>"; };
 		26BAEC821979E7610065B33F /* ProductItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductItem.m; sourceTree = "<group>"; };
+		26BAEC88197B52770065B33F /* ProductItemStoreDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ProductItemStoreDelegate.h; path = ../ProductItemStoreDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +257,7 @@
 			children = (
 				26BAEC7C1979E3420065B33F /* ProductItemStore.h */,
 				26BAEC7D1979E3420065B33F /* ProductItemStore.m */,
+				26BAEC88197B52770065B33F /* ProductItemStoreDelegate.h */,
 				26BAEC811979E7610065B33F /* ProductItem.h */,
 				26BAEC821979E7610065B33F /* ProductItem.m */,
 			);
