@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2646A468197F362A00C4FE5D /* EditFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2646A467197F362A00C4FE5D /* EditFriendsViewController.m */; };
 		26BAEB651976051A0065B33F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26BAEB641976051A0065B33F /* Foundation.framework */; };
 		26BAEB671976051A0065B33F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26BAEB661976051A0065B33F /* CoreGraphics.framework */; };
 		26BAEB691976051A0065B33F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26BAEB681976051A0065B33F /* UIKit.framework */; };
@@ -60,6 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2646A466197F362A00C4FE5D /* EditFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditFriendsViewController.h; path = ../EditFriendsViewController.h; sourceTree = "<group>"; };
+		2646A467197F362A00C4FE5D /* EditFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditFriendsViewController.m; path = ../EditFriendsViewController.m; sourceTree = "<group>"; };
 		26BAEB611976051A0065B33F /* Ribbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ribbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26BAEB641976051A0065B33F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		26BAEB661976051A0065B33F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -273,6 +276,8 @@
 				26BAEBFB19764E100065B33F /* LoginViewController.m */,
 				26BAEBFD19764E220065B33F /* SignupViewController.h */,
 				26BAEBFE19764E220065B33F /* SignupViewController.m */,
+				2646A466197F362A00C4FE5D /* EditFriendsViewController.h */,
+				2646A467197F362A00C4FE5D /* EditFriendsViewController.m */,
 				26BAEC651978A1DF0065B33F /* ShopTableViewController.h */,
 				26BAEC661978A1DF0065B33F /* ShopTableViewController.m */,
 				26BAEC701978EEC60065B33F /* ShopTableViewCell.h */,
@@ -397,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26BAEC7B19790B230065B33F /* TabBarControllerDelegate.m in Sources */,
+				2646A468197F362A00C4FE5D /* EditFriendsViewController.m in Sources */,
 				26BAEBFC19764E100065B33F /* LoginViewController.m in Sources */,
 				26BAEC7E1979E3420065B33F /* ProductItemStore.m in Sources */,
 				26BAEBA4197634590065B33F /* InboxViewControllerTableViewController.m in Sources */,
