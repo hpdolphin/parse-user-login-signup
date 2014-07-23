@@ -7,6 +7,7 @@
 //
 
 #import "EditFriendsViewController.h"
+#import "FriendsStore.h"
 
 @interface EditFriendsViewController ()
 
@@ -53,6 +54,17 @@
     //Configure the cell...
     PFUser *user = [self.allUsers objectAtIndex:indexPath.row];
     cell.textLabel.text = user.username;
+    
+    //add checkmark if the user is part of the friends
+    //NSLog(@"Friends number:%d",[[[FriendsStore sharedStore] friends] count]);
+    //NSArray *myfriends = [[FriendsStore sharedStore] friends];
+    
+    if ([[FriendsStore sharedStore] isAFriend:user.username]) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }else{
+        //clear the checkmark for preventing cell reusing
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
     
     return cell;
 }

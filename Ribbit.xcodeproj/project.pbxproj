@@ -49,6 +49,7 @@
 		26BAEC7E1979E3420065B33F /* ProductItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BAEC7D1979E3420065B33F /* ProductItemStore.m */; };
 		26BAEC831979E7610065B33F /* ProductItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BAEC821979E7610065B33F /* ProductItem.m */; };
 		26CD0BBF197F7BA100D617FF /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CD0BBE197F7BA100D617FF /* FriendsViewController.m */; };
+		26CD0BC2197F838600D617FF /* FriendsStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CD0BC1197F838600D617FF /* FriendsStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +121,8 @@
 		26BAEC88197B52770065B33F /* ProductItemStoreDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ProductItemStoreDelegate.h; path = ../ProductItemStoreDelegate.h; sourceTree = "<group>"; };
 		26CD0BBD197F7BA100D617FF /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendsViewController.h; path = ../FriendsViewController.h; sourceTree = "<group>"; };
 		26CD0BBE197F7BA100D617FF /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendsViewController.m; path = ../FriendsViewController.m; sourceTree = "<group>"; };
+		26CD0BC0197F838600D617FF /* FriendsStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsStore.h; sourceTree = "<group>"; };
+		26CD0BC1197F838600D617FF /* FriendsStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +269,8 @@
 				26BAEC88197B52770065B33F /* ProductItemStoreDelegate.h */,
 				26BAEC811979E7610065B33F /* ProductItem.h */,
 				26BAEC821979E7610065B33F /* ProductItem.m */,
+				26CD0BC0197F838600D617FF /* FriendsStore.h */,
+				26CD0BC1197F838600D617FF /* FriendsStore.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -411,6 +416,7 @@
 				2646A468197F362A00C4FE5D /* EditFriendsViewController.m in Sources */,
 				26BAEBFC19764E100065B33F /* LoginViewController.m in Sources */,
 				26BAEC7E1979E3420065B33F /* ProductItemStore.m in Sources */,
+				26CD0BC2197F838600D617FF /* FriendsStore.m in Sources */,
 				26BAEBA4197634590065B33F /* InboxViewControllerTableViewController.m in Sources */,
 				26BAEC831979E7610065B33F /* ProductItem.m in Sources */,
 				26BAEB711976051A0065B33F /* main.m in Sources */,
