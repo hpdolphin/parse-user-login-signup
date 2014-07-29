@@ -42,6 +42,14 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
     // Store the deviceToken in the current installation and save it to Parse
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
     [currentInstallation setDeviceTokenFromData:deviceToken];
+    
+    // Subscribe to the Channel name as own Email
+    PFUser *currentUser = [PFUser currentUser];
+    if(currentUser){
+        //NSLog(@"User's name is %@",currentUser.username);
+        [currentInstallation addUniqueObject:currentUser.username forKey:@"channels"];
+    }
+    
     [currentInstallation saveInBackground];
 }
 

@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface RibbitMessagingViewController : UIViewController
+
 @property (strong, nonatomic) IBOutlet UITextView *messageInputView;
+@property (strong, nonatomic) NSString *targetName;
+
 - (IBAction)cancel:(id)sender;
 - (IBAction)send:(id)sender;
 

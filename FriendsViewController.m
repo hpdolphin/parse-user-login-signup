@@ -78,9 +78,13 @@
 
 #pragma mark - Table view delegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    //geth the user
+    
+    //geth the user name
+    UITableViewCell *friendCell = [tableView cellForRowAtIndexPath:indexPath];
+    NSString *friendName = friendCell.textLabel.text;
     
     //Pop up messaging view
+    _messagingViewController.targetName = friendName;
     [self.navigationController pushViewController:_messagingViewController animated:YES];
 }
 
