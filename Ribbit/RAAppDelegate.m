@@ -24,12 +24,29 @@
     //[Parse setApplicationId:@"fXzhkOaiiU5eVbVJNBGsCSvnezXfXlnfHxNuvFaG"
     //              clientKey:@"QR8C3mJi7la2hVWW6OuVEtIljuZWGQw0l5wrAU21"];
     
+    // Register for push notifications
+    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|
+                                                    UIRemoteNotificationTypeBadge|
+                                                    UIRemoteNotificationTypeSound];
+    
     //hook the tab bar delegate
     tabBarControllerDelegate = [[TabBarControllerDelegate alloc] init];
     UITabBarController *rootController = (UITabBarController*)self.window.rootViewController;
     rootController.delegate = tabBarControllerDelegate;
     
     return YES;
+}
+
+-(void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
+    // Store the deviceToken in the current installation and save it to Parse
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackground];
+}
+
+-(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo{
+    [PFPush handlePush:userInfo];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

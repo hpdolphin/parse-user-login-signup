@@ -161,7 +161,7 @@
                     <navigationItem key="navigationItem" title="Friends" id="PCR-ZQ-EIN">
                         <barButtonItem key="rightBarButtonItem" title="Edit" id="6Mw-AK-Zr3">
                             <connections>
-                                <segue destination="ogN-qh-7NQ" kind="push" id="3hL-Lm-FV8"/>
+                                <segue destination="ogN-qh-7NQ" kind="push" id="m6s-Ue-H4C"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

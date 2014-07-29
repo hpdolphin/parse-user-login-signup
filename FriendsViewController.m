@@ -20,6 +20,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //_messagingViewController = [[UIViewController alloc] init];
+    _messagingViewController = [[RibbitMessagingViewController alloc] init];
     
     self.friendsRelation = [[PFUser currentUser] objectForKey:@"friendsRelation"];
     [self showFriends];
@@ -74,5 +76,12 @@
     return cell;
 }
 
+#pragma mark - Table view delegate
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    //geth the user
+    
+    //Pop up messaging view
+    [self.navigationController pushViewController:_messagingViewController animated:YES];
+}
 
 @end

@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import "RibbitMessagingViewController.h"
 
-@interface FriendsViewController : UITableViewController
+@interface FriendsViewController : UITableViewController <UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic,strong) PFRelation *friendsRelation;
 @property (nonatomic,strong) NSArray *friends;
+@property (nonatomic,strong) RibbitMessagingViewController *messagingViewController;
 
 @end

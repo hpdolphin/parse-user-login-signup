@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2646A468197F362A00C4FE5D /* EditFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2646A467197F362A00C4FE5D /* EditFriendsViewController.m */; };
+		269BD593198731B300B378EF /* RibbitMessagingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269BD591198731B300B378EF /* RibbitMessagingViewController.m */; };
+		269BD594198731B300B378EF /* RibbitMessagingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 269BD592198731B300B378EF /* RibbitMessagingViewController.xib */; };
 		26BAEB651976051A0065B33F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26BAEB641976051A0065B33F /* Foundation.framework */; };
 		26BAEB671976051A0065B33F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26BAEB661976051A0065B33F /* CoreGraphics.framework */; };
 		26BAEB691976051A0065B33F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26BAEB681976051A0065B33F /* UIKit.framework */; };
@@ -65,6 +67,9 @@
 /* Begin PBXFileReference section */
 		2646A466197F362A00C4FE5D /* EditFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditFriendsViewController.h; path = ../EditFriendsViewController.h; sourceTree = "<group>"; };
 		2646A467197F362A00C4FE5D /* EditFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditFriendsViewController.m; path = ../EditFriendsViewController.m; sourceTree = "<group>"; };
+		269BD590198731B300B378EF /* RibbitMessagingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RibbitMessagingViewController.h; sourceTree = "<group>"; };
+		269BD591198731B300B378EF /* RibbitMessagingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RibbitMessagingViewController.m; sourceTree = "<group>"; };
+		269BD592198731B300B378EF /* RibbitMessagingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RibbitMessagingViewController.xib; sourceTree = "<group>"; };
 		26BAEB611976051A0065B33F /* Ribbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ribbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26BAEB641976051A0065B33F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		26BAEB661976051A0065B33F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -288,6 +293,9 @@
 				2646A467197F362A00C4FE5D /* EditFriendsViewController.m */,
 				26CD0BBD197F7BA100D617FF /* FriendsViewController.h */,
 				26CD0BBE197F7BA100D617FF /* FriendsViewController.m */,
+				269BD590198731B300B378EF /* RibbitMessagingViewController.h */,
+				269BD591198731B300B378EF /* RibbitMessagingViewController.m */,
+				269BD592198731B300B378EF /* RibbitMessagingViewController.xib */,
 				26BAEC651978A1DF0065B33F /* ShopTableViewController.h */,
 				26BAEC661978A1DF0065B33F /* ShopTableViewController.m */,
 				26BAEC701978EEC60065B33F /* ShopTableViewCell.h */,
@@ -384,6 +392,7 @@
 				26BAEB9D19760BAD0065B33F /* friends.png in Resources */,
 				26BAEC6019789B320065B33F /* MainStoryboard.storyboard in Resources */,
 				26BAEC631978A1520065B33F /* Shopping Cart.png in Resources */,
+				269BD594198731B300B378EF /* RibbitMessagingViewController.xib in Resources */,
 				26BAEB9E19760BAD0065B33F /* friends@2x.png in Resources */,
 				26BAEB9C19760BAD0065B33F /* camera@2x.png in Resources */,
 				26BAEB9F19760BAD0065B33F /* inbox.png in Resources */,
@@ -422,6 +431,7 @@
 				26BAEB711976051A0065B33F /* main.m in Sources */,
 				26BAEC721978EEC60065B33F /* ShopTableViewCell.m in Sources */,
 				26BAEC671978A1DF0065B33F /* ShopTableViewController.m in Sources */,
+				269BD593198731B300B378EF /* RibbitMessagingViewController.m in Sources */,
 				26BAEB751976051A0065B33F /* RAAppDelegate.m in Sources */,
 				26BAEBFF19764E220065B33F /* SignupViewController.m in Sources */,
 			);
@@ -482,7 +492,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: org.alex.ribbit";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development IOS Push Services: org.alex.ribbit";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -498,8 +509,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "0442619C-B54A-4C5A-B9CF-51DE7A14D1D7";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -521,7 +533,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: org.alex.ribbit";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development IOS Push Services: org.alex.ribbit";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -531,7 +544,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PROVISIONING_PROFILE = "0442619C-B54A-4C5A-B9CF-51DE7A14D1D7";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -542,7 +556,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: org.alex.ribbit";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -560,7 +574,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: org.alex.ribbit";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
