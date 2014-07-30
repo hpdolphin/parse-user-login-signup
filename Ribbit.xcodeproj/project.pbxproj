@@ -53,6 +53,10 @@
 		26BAEC831979E7610065B33F /* ProductItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BAEC821979E7610065B33F /* ProductItem.m */; };
 		26CD0BBF197F7BA100D617FF /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CD0BBE197F7BA100D617FF /* FriendsViewController.m */; };
 		26CD0BC2197F838600D617FF /* FriendsStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CD0BC1197F838600D617FF /* FriendsStore.m */; };
+		26EBC17E1988E139007C89EC /* icon_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 26EBC17A1988E139007C89EC /* icon_image.png */; };
+		26EBC17F1988E139007C89EC /* icon_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26EBC17B1988E139007C89EC /* icon_image@2x.png */; };
+		26EBC1801988E139007C89EC /* icon_video.png in Resources */ = {isa = PBXBuildFile; fileRef = 26EBC17C1988E139007C89EC /* icon_video.png */; };
+		26EBC1811988E139007C89EC /* icon_video@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26EBC17D1988E139007C89EC /* icon_video@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +135,10 @@
 		26CD0BBE197F7BA100D617FF /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendsViewController.m; path = ../FriendsViewController.m; sourceTree = "<group>"; };
 		26CD0BC0197F838600D617FF /* FriendsStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsStore.h; sourceTree = "<group>"; };
 		26CD0BC1197F838600D617FF /* FriendsStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsStore.m; sourceTree = "<group>"; };
+		26EBC17A1988E139007C89EC /* icon_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_image.png; sourceTree = "<group>"; };
+		26EBC17B1988E139007C89EC /* icon_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_image@2x.png"; sourceTree = "<group>"; };
+		26EBC17C1988E139007C89EC /* icon_video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_video.png; sourceTree = "<group>"; };
+		26EBC17D1988E139007C89EC /* icon_video@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_video@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +265,10 @@
 		26BAEBA119760BF60065B33F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				26EBC17A1988E139007C89EC /* icon_image.png */,
+				26EBC17B1988E139007C89EC /* icon_image@2x.png */,
+				26EBC17C1988E139007C89EC /* icon_video.png */,
+				26EBC17D1988E139007C89EC /* icon_video@2x.png */,
 				26BAEB9519760BAD0065B33F /* camera.png */,
 				26BAEC611978A1520065B33F /* Shopping Cart.png */,
 				26BAEC621978A1520065B33F /* Shopping Cart@2x.png */,
@@ -394,17 +406,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26EBC1801988E139007C89EC /* icon_video.png in Resources */,
 				26BAEB9D19760BAD0065B33F /* friends.png in Resources */,
 				26BAEC6019789B320065B33F /* MainStoryboard.storyboard in Resources */,
 				26BAEC631978A1520065B33F /* Shopping Cart.png in Resources */,
 				269BD594198731B300B378EF /* RibbitMessagingViewController.xib in Resources */,
+				26EBC17E1988E139007C89EC /* icon_image.png in Resources */,
 				26BAEB9E19760BAD0065B33F /* friends@2x.png in Resources */,
 				26BAEB9C19760BAD0065B33F /* camera@2x.png in Resources */,
 				26BAEB9F19760BAD0065B33F /* inbox.png in Resources */,
 				26BAEB6F1976051A0065B33F /* InfoPlist.strings in Resources */,
+				26EBC1811988E139007C89EC /* icon_video@2x.png in Resources */,
 				26BAEB9B19760BAD0065B33F /* camera.png in Resources */,
 				26BAEB771976051A0065B33F /* Images.xcassets in Resources */,
 				26BAEC6E1978A7500065B33F /* Development.xcconfig in Resources */,
+				26EBC17F1988E139007C89EC /* icon_image@2x.png in Resources */,
 				26BAEC641978A1520065B33F /* Shopping Cart@2x.png in Resources */,
 				26BAEBA019760BAD0065B33F /* inbox@2x.png in Resources */,
 			);
