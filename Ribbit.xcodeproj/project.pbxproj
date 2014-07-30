@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2646A468197F362A00C4FE5D /* EditFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2646A467197F362A00C4FE5D /* EditFriendsViewController.m */; };
+		268C4B191988650D00FE5AD2 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C4B181988650D00FE5AD2 /* CameraViewController.m */; };
 		269BD593198731B300B378EF /* RibbitMessagingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269BD591198731B300B378EF /* RibbitMessagingViewController.m */; };
 		269BD594198731B300B378EF /* RibbitMessagingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 269BD592198731B300B378EF /* RibbitMessagingViewController.xib */; };
 		26BAEB651976051A0065B33F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26BAEB641976051A0065B33F /* Foundation.framework */; };
@@ -67,6 +68,8 @@
 /* Begin PBXFileReference section */
 		2646A466197F362A00C4FE5D /* EditFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditFriendsViewController.h; path = ../EditFriendsViewController.h; sourceTree = "<group>"; };
 		2646A467197F362A00C4FE5D /* EditFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditFriendsViewController.m; path = ../EditFriendsViewController.m; sourceTree = "<group>"; };
+		268C4B171988650D00FE5AD2 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraViewController.h; path = ../CameraViewController.h; sourceTree = "<group>"; };
+		268C4B181988650D00FE5AD2 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraViewController.m; path = ../CameraViewController.m; sourceTree = "<group>"; };
 		269BD590198731B300B378EF /* RibbitMessagingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RibbitMessagingViewController.h; sourceTree = "<group>"; };
 		269BD591198731B300B378EF /* RibbitMessagingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RibbitMessagingViewController.m; sourceTree = "<group>"; };
 		269BD592198731B300B378EF /* RibbitMessagingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RibbitMessagingViewController.xib; sourceTree = "<group>"; };
@@ -283,6 +286,8 @@
 		26BAEC801979E7140065B33F /* contorller */ = {
 			isa = PBXGroup;
 			children = (
+				268C4B171988650D00FE5AD2 /* CameraViewController.h */,
+				268C4B181988650D00FE5AD2 /* CameraViewController.m */,
 				26BAEBA2197634590065B33F /* InboxViewControllerTableViewController.h */,
 				26BAEBA3197634590065B33F /* InboxViewControllerTableViewController.m */,
 				26BAEBFA19764E100065B33F /* LoginViewController.h */,
@@ -420,6 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				268C4B191988650D00FE5AD2 /* CameraViewController.m in Sources */,
 				26CD0BBF197F7BA100D617FF /* FriendsViewController.m in Sources */,
 				26BAEC7B19790B230065B33F /* TabBarControllerDelegate.m in Sources */,
 				2646A468197F362A00C4FE5D /* EditFriendsViewController.m in Sources */,
@@ -509,7 +515,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "0442619C-B54A-4C5A-B9CF-51DE7A14D1D7";
 				SDKROOT = iphoneos;
@@ -544,7 +550,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PROVISIONING_PROFILE = "0442619C-B54A-4C5A-B9CF-51DE7A14D1D7";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
