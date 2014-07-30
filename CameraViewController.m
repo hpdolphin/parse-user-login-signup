@@ -192,6 +192,7 @@
             [message setObject:self.recipents forKey:@"recipientIds"];
             [message setObject:[[PFUser currentUser] objectId] forKey:@"senderId"];
             [message setObject:[[PFUser currentUser] username] forKey:@"senderName"];
+            //NSLog(@"Prepare send to recipients:%@",self.recipents);
             
             [message saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                 if (error) {

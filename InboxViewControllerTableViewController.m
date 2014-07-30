@@ -7,7 +7,7 @@
 //
 
 #import "InboxViewControllerTableViewController.h"
-#import <Parse/Parse.h>
+#import "ImageViewController.h"
 
 @interface InboxViewControllerTableViewController ()
 
@@ -18,6 +18,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _moviePlayer = [[MPMoviePlayerController alloc] init];
     
     PFUser *currentUser = [PFUser currentUser];
     if(currentUser){
@@ -30,6 +31,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
+    //if(self.messages.count==0){
     PFQuery *query = [PFQuery queryWithClassName:@"Messages"];
     //only my id is in recipients
     [query whereKey:@"recipientIds" equalTo:[[PFUser currentUser] objectId]];
@@ -42,9 +44,13 @@
             // message found
             self.messages = objects;
             [self.tableView reloadData];
-            NSLog(@"Retrived %d messages",[self.messages count]);
+            /*NSLog(@"Retrived %d messages",[self.messages count]);
+            for (PFObject *oneMessage in self.messages) {
+                NSLog(@"Message id:%@",oneMessage.objectId);
+            }*/
         }
     }];
+    //}
 }
 
 #pragma mark - Table view data source
@@ -79,6 +85,39 @@
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    _selectedMessage = [_messages objectAtIndex:indexPath.row];
+    NSString *fileType = [_selectedMessage objectForKey:@"fileType"];
+    if ([fileType isEqualToString:@"image"]) {
+        [self performSegueWithIdentifier:@"showImage" sender:self];
+    }else{
+        // File type is a video
+        PFFile *videoFile = [self.selectedMessage objectForKey:@"file"];
+        //NSLog(@"Prepare to play movie at URL:%@",videoFile.url);
+        NSURL *fileUrl = [NSURL URLWithString:videoFile.url];
+        self.moviePlayer.contentURL = fileUrl;
+        [self.moviePlayer prepareToPlay];
+        [self.moviePlayer thumbnailImageAtTime:0 timeOption:MPMovieTimeOptionNearestKeyFrame];
+        
+        // add it to the view controller so we can see it
+        [self.view addSubview:self.moviePlayer.view];
+        [self.moviePlayer setFullscreen:YES animated:YES];
+    }
+    //start to delete
+    NSMutableArray *recipientIds = [NSMutableArray arrayWithArray:[self.selectedMessage objectForKey:@"recipientIds"]];
+    NSLog(@"Recipients: %@",recipientIds);
+    
+    if ([recipientIds count]==1) {
+        //Last recipient - delete
+        [self.selectedMessage deleteInBackground];
+    }else{
+        //Remove the recipient & save it
+        [recipientIds removeObject:[[PFUser currentUser] objectId]];
+        [self.selectedMessage setObject:recipientIds forKey:@"recipientIds"];
+        [self.selectedMessage saveInBackground];
+    }
+}
+
 - (IBAction)logout:(id)sender {
     [PFUser logOut];
     [self performSegueWithIdentifier:@"showLogin" sender:self];
@@ -87,6 +126,11 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"showLogin"]){
         [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
+    }else if ([segue.identifier isEqualToString:@"showImage"]){
+        [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
+        ImageViewController *imageViewController = (ImageViewController *)segue.destinationViewController;
+        imageViewController.message = self.selectedMessage;
+        //NSLog(@"Prepare to show image from message %@",self.selectedMessage.objectId);
     }
 }
 

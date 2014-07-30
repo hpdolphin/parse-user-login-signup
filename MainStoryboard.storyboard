@@ -211,6 +211,34 @@
             </objects>
             <point key="canvasLocation" x="2505" y="264"/>
         </scene>
+        <!--Image View Controller-->
+        <scene sceneID="tUa-po-L0k">
+            <objects>
+                <viewController id="7BU-6h-6zU" customClass="ImageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="24E-pz-vw4"/>
+                        <viewControllerLayoutGuide type="bottom" id="r8r-fP-2Je"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SgM-bl-ScM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1dS-Bn-wUK">
+                                <rect key="frame" x="0.0" y="65" width="320" height="415"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YAr-iW-u8t"/>
+                    <connections>
+                        <outlet property="imageView" destination="1dS-Bn-wUK" id="6Cn-FW-ccW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kc9-dj-ucd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2480" y="-916"/>
+        </scene>
         <!--Inbox View Controller Table View Controller - Ribbit-->
         <scene sceneID="HKv-P7-y7X">
             <objects>
@@ -243,11 +271,12 @@
                     </navigationItem>
                     <connections>
                         <segue destination="5Vz-Xp-6rz" kind="push" identifier="showLogin" id="3r8-Y7-2R8"/>
+                        <segue destination="7BU-6h-6zU" kind="push" identifier="showImage" id="WY2-hd-9jX"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="244-C9-akc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2066" y="-333"/>
+            <point key="canvasLocation" x="2098" y="-333"/>
         </scene>
         <!--Login View Controller - login-->
         <scene sceneID="eqi-Hu-JmU">

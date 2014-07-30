@@ -57,6 +57,8 @@
 		26EBC17F1988E139007C89EC /* icon_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26EBC17B1988E139007C89EC /* icon_image@2x.png */; };
 		26EBC1801988E139007C89EC /* icon_video.png in Resources */ = {isa = PBXBuildFile; fileRef = 26EBC17C1988E139007C89EC /* icon_video.png */; };
 		26EBC1811988E139007C89EC /* icon_video@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26EBC17D1988E139007C89EC /* icon_video@2x.png */; };
+		26EBC1841988F169007C89EC /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EBC1831988F169007C89EC /* ImageViewController.m */; };
+		26EBC18619890534007C89EC /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26EBC18519890534007C89EC /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +141,9 @@
 		26EBC17B1988E139007C89EC /* icon_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_image@2x.png"; sourceTree = "<group>"; };
 		26EBC17C1988E139007C89EC /* icon_video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_video.png; sourceTree = "<group>"; };
 		26EBC17D1988E139007C89EC /* icon_video@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_video@2x.png"; sourceTree = "<group>"; };
+		26EBC1821988F169007C89EC /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageViewController.h; path = ../ImageViewController.h; sourceTree = "<group>"; };
+		26EBC1831988F169007C89EC /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageViewController.m; path = ../ImageViewController.m; sourceTree = "<group>"; };
+		26EBC18519890534007C89EC /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +151,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26EBC18619890534007C89EC /* MediaPlayer.framework in Frameworks */,
 				26BAEBF31976488C0065B33F /* CoreLocation.framework in Frameworks */,
 				26BAEBF41976488C0065B33F /* libz.dylib in Frameworks */,
 				26BAEBF51976488C0065B33F /* MobileCoreServices.framework in Frameworks */,
@@ -200,6 +206,7 @@
 		26BAEB631976051A0065B33F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				26EBC18519890534007C89EC /* MediaPlayer.framework */,
 				26BAEBEC1976488C0065B33F /* CoreLocation.framework */,
 				26BAEBED1976488C0065B33F /* libz.dylib */,
 				26BAEBEE1976488C0065B33F /* MobileCoreServices.framework */,
@@ -302,6 +309,8 @@
 				268C4B181988650D00FE5AD2 /* CameraViewController.m */,
 				26BAEBA2197634590065B33F /* InboxViewControllerTableViewController.h */,
 				26BAEBA3197634590065B33F /* InboxViewControllerTableViewController.m */,
+				26EBC1821988F169007C89EC /* ImageViewController.h */,
+				26EBC1831988F169007C89EC /* ImageViewController.m */,
 				26BAEBFA19764E100065B33F /* LoginViewController.h */,
 				26BAEBFB19764E100065B33F /* LoginViewController.m */,
 				26BAEBFD19764E220065B33F /* SignupViewController.h */,
@@ -443,6 +452,7 @@
 			files = (
 				268C4B191988650D00FE5AD2 /* CameraViewController.m in Sources */,
 				26CD0BBF197F7BA100D617FF /* FriendsViewController.m in Sources */,
+				26EBC1841988F169007C89EC /* ImageViewController.m in Sources */,
 				26BAEC7B19790B230065B33F /* TabBarControllerDelegate.m in Sources */,
 				2646A468197F362A00C4FE5D /* EditFriendsViewController.m in Sources */,
 				26BAEBFC19764E100065B33F /* LoginViewController.m in Sources */,
